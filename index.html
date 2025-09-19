@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nhập key</title>
+  <link rel="icon" type="image/png" href="itachi.png">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #000;
+      color: white;
+      text-align: center;
+      padding-top: 80px;
+    }
+    .logo img {
+      width: 140px;
+      border-radius: 10px;
+      animation: pulse 3s infinite ease-in-out;
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+    .title {
+      font-size: 22px;
+      color: red;
+      font-weight: bold;
+      margin: 20px 0;
+    }
+    input[type="text"] {
+      padding: 10px;
+      width: 220px;
+      border: none;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+    button {
+      padding: 10px 20px;
+      background: red;
+      border: none;
+      border-radius: 5px;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="logo">
+    <img src="itachi.png" alt="logo">
+  </div>
+  <div class="title">qthinh dz lv max</div>
+  <p>Nhập key để tiếp tục:</p>
+  
+  <input type="text" id="keyInput" placeholder="Nhập key..."><br>
+  <button onclick="checkKey()">Xác nhận</button>
+
+  <script>
+    function checkKey() {
+      const key = document.getElementById("keyInput").value;
+      if (key === "qthinhdz") {
+        window.location.href = "home.html"; 
+      } else {
+        alert("❌ Sai key, vui lòng thử lại!");
+      }
+    }
+  </script>
+</body>
+</html>
